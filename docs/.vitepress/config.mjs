@@ -17,7 +17,8 @@ export default defineConfig({
         items: [
           { text: 'Markdown Examples', link: '/markdown-examples' },
           { text: 'Runtime API Examples', link: '/api-examples' },
-          { text:'网络编程', link:"/计算机网络编程"}
+          { text:'计算机网络编程(1)', link:"/计算机网络编程(1)"},
+          { text:'计算机网络编程(2)', link:"/计算机网络编程(2)"}
         ]
       }
     ],

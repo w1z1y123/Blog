@@ -1,30 +1,52 @@
-import { defineConfig } from 'vitepress'
-
-// https://vitepress.dev/reference/site-config
+import { defineConfig } from "vitepress";
+import { fileURLToPath, URL } from "node:url";
+import { getSidebar } from "./utils/getSidebar";
 export default defineConfig({
-  title: "My Awesome Project",
-  description: "A VitePress Site",
+  title: "wzyll's Blog",
+  titleTemplate: "wzyll",
+  // md 文件根目录
+  srcDir: "./src",
+  lastUpdated: true,
+  description:
+    "",
+  head: [["link", { rel: "icon", href: "/logo.svg" }]],
   themeConfig: {
-    // https://vitepress.dev/reference/default-theme-config
+    logo: "/logo.svg",
+    // 顶部导航栏
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: "👋 About", link: "AboutMe.md" },
+      { text: "💭 Blogs", link: "/Notes/index" },
+      { text: "🦄 Projects", link: "Projects.md" },
+     
     ],
-
-    sidebar: [
-      {
-        text: 'Examples',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' },
-          { text:'计算机网络编程(1)', link:"/计算机网络编程(1)"},
-          { text:'计算机网络编程(2)', link:"/计算机网络编程(2)"}
-        ]
-      }
-    ],
-
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
-    ]
-  }
-})
+    // 文章页面左侧导航
+    sidebar: {
+      "/Notes/": getSidebar(),
+    },
+    // 是否启动搜索功能
+    search: {
+      provider: "local",
+    },
+    // 顶部导航栏左侧的社交平台跳转
+    socialLinks: [{ icon: "github", link: "hhttps://github.com/w1z1y123" }],
+    // 首页底部版权声明
+    footer: {
+      message: "Released under the MIT License.",
+      copyright: "Copyright © 2023-present wzyll",
+    },
+    // 文章内导航栏标题
+    outlineTitle: "导航栏",
+  },
+  vite: {
+    resolve: {
+      alias: [
+        {
+          find: /^.*\/VPDocFooterLastUpdated\.vue$/,
+          replacement: fileURLToPath(
+            new URL("./components/UpdateTime.vue", import.meta.url)
+          ),
+        },
+      ],
+    },
+  },
+});

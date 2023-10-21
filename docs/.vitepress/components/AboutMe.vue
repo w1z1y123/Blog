@@ -1,10 +1,9 @@
 <template>
-   <div>👶🏻</div>
-    <div>正在施工……</div>
-  </template>
+
+</template>
   
-  <script setup></script>
+<script setup></script>
   
-  <style scoped>
+<style scoped>
      
-  </style>
+</style>

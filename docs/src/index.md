@@ -13,7 +13,7 @@ hero:
   actions:
     - theme: brand
       text: Welcome to My Docs
-      link: /Note/index
+      link: /Notes/index
     - theme: alt
       text: about me
       link: /Aboutme

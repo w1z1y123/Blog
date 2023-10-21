@@ -9,8 +9,8 @@
 <style scoped>
 .custom-block {
   background-color: #facbd299; 
-  color: black; 
-  padding: 2px 4px;
+  color: rgb(190 55 60);
+  padding: 1px 1px;
   border-radius: 3px;
 }
 </style>

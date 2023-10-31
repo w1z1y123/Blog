@@ -8,7 +8,8 @@ export const COLS = [
   {text:"🍳 计算机网络编程",link:"/计算机网络编程/"},
   {text:"🍾Leetcode",link:"/Leetcode刷题/"},
   {text:"🍿 计算机系统与网络安全技术",link:"/计算机系统与网络安全技术/"},
-  {text:"🥙 网络与系统攻击技术",link:"/网络与系统攻击技术/"}
+  {text:"🥙 网络与系统攻击技术",link:"/网络与系统攻击技术/"},
+  {text:"深度学习",link:"/深度学习/"}
 ];
 
 /**

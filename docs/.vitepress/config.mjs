@@ -7,6 +7,10 @@ export default defineConfig({
   // md 文件根目录
   srcDir: "./src",
   lastUpdated: true,
+  // 添加这一行来启用 mathjax 支持
+  markdown: {
+    math: true,
+   },
   description:
     "",
   head: [["link", { rel: "icon", href: "/logo.svg" }]],
